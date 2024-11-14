@@ -10,8 +10,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "18.3.1",
-    "react-native": "0.76.0",
     "@react-native-async-storage/async-storage": "^2.0.0",
     "@react-native-community/netinfo": "^11.3.3",
     "@react-navigation/bottom-tabs": "^6.6.1",
@@ -22,7 +20,9 @@
     "date-fns": "^2.29.3",
     "hybrid-crypto-js": "^0.2.4",
     "randomstring": "^1.3.0",
+    "react": "18.3.1",
     "react-i18next": "^14.0.0",
+    "react-native": "0.76.0",
     "react-native-background-timer": "^2.4.1",
     "react-native-chart-kit": "^6.12.0",
     "react-native-check-box": "^2.1.7",

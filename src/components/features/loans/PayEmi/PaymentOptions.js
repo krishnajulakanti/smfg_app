@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import { ScrollView, View, Text, Image, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { Card, Divider } from 'react-native-paper';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { ListItem } from '@rneui/themed'
 
 import Header from '../../../common/Header';
-
-
+import BHIM from '../../../../assets/images/bhim.png';
+import QR from '../../../../assets/images/qr.png';
+import GPAY from '../../../../assets/images/gpay.png';
+import PHONEPE from '../../../../assets/images/phonepe.png';
+import PAYTM from '../../../../assets/images/paytm.png';
+import HDFC from '../../../../assets/images/hdfc.png';
+import ICICI from '../../../../assets/images/icici.png';
+import YES from '../../../../assets/images/yes_bank.png';
 
 const accordionList = [
   {
@@ -118,11 +124,11 @@ const PaymentOptions = ({ navigation }) => {
               <Card style={styles.cardContainer}>
                 <View style={styles.paycard}>
                   <View>
-                    <Text>BHIM</Text>
+                    <Image source={BHIM} style={styles.logos} />
                   </View>
                   <View style={styles.verticalBar} />
                   <View>
-                    <Text>QR Code</Text>
+                    <Image source={QR} style={styles.logos} />
                     <Text style={styles.qrText}>Scan & Pay with any UPI App</Text>
                   </View>
                 </View>
@@ -144,15 +150,23 @@ const PaymentOptions = ({ navigation }) => {
               setExpanded(!expanded);
             }}
           >
-            {/* <View style={styles.paymentOptions}>
-                        <View style={styles.iconRow}>
-                            <MaterialIcons name="google" size={30} />
-                            <MaterialIcons name="phone-android" size={30} />
-                            <MaterialIcons name="payment" size={30} />
-                            <MaterialIcons name="amazon" size={30} />
-                        </View>
-                        <TextInput style={styles.input} placeholder="Enter UPI ID" />
-                    </View> */}
+            <View style={styles.paymentOptions}>
+              <View style={styles.iconRow}>
+                <Card style={styles.paymentOptionsCards}>
+                  <Image source={GPAY} style={{ width: 50, height: 20, margin: 15, bottom: 5 }} />
+                </Card>
+                <Card style={styles.paymentOptionsCards}>
+                  <Image source={GPAY} style={{ width: 50, height: 20, margin: 15, bottom: 5 }} />
+                </Card>
+                <Card style={styles.paymentOptionsCards}>
+                  <Image source={GPAY} style={{ width: 50, height: 20, margin: 15, bottom: 5 }} />
+                </Card>
+                <Card style={styles.paymentOptionsCards}>
+                  <Image source={GPAY} style={{ width: 50, height: 20, margin: 15, bottom: 5 }} />
+                </Card>
+              </View>
+              <TextInput style={styles.input} placeholder="Enter UPI ID" />
+            </View>
           </ListItem.Accordion>
         </View>
 
@@ -215,7 +229,7 @@ const PaymentOptions = ({ navigation }) => {
           <Text style={styles.cancelButtonText}>
             CANCEL</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('PaymentOptions')}
+        <TouchableOpacity onPress={() => navigation.navigate('PaymentSuccess')}
           style={styles.proceedButton}>
           <Text style={styles.proceedButtonText}>
             PROCEED</Text>
@@ -281,21 +295,26 @@ const styles = StyleSheet.create({
 
   recommendedSection: {
     marginVertical: 10,
+    backgroundColor: '#DDDDDD',
+    padding: 10,
+    marginHorizontal: 14,
   },
   cardContainer: {
-    marginHorizontal: 12
+    // marginHorizontal: 12,
   },
   paycard: {
     paddingHorizontal: 16,
     paddingVertical: 16,
-    // marginRight: 10,
-    // marginLeft: 10,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+  },
+  logos: {
+    width: 150,
+    height: 60,
   },
   verticalBar: {
-    marginLeft: 90,
+    marginLeft: 10,
     width: 2,
     height: 100,
     backgroundColor: '#999999',
@@ -309,19 +328,28 @@ const styles = StyleSheet.create({
     color: 'gray',
   },
   paymentOptions: {
-    marginTop: 10,
+    margin: 13,
+    backgroundColor: '#DDDDDD',
+
+  },
+  paymentOptionsCards: {
+    width: 80,
+    height: 40,
+    // padding: 10,
+    marginHorizontal: 8,
   },
   iconRow: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginVertical: 10,
+    marginTop: 10,
+    // justifyContent: 'space-between',
+    // marginVertical: 10,
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#C3D600',
     borderRadius: 5,
     padding: 8,
-    marginVertical: 10,
+    margin: 12,
   },
   bankCard: {
     padding: 16,

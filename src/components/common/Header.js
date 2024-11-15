@@ -28,14 +28,15 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 20,
+    marginTop: 10,
+    marginBottom: 10,
     paddingHorizontal: 20,
     height: 55,
     backgroundColor: '#DDDDDD',
   },
   topBar: {
     position: 'absolute',
-    bottom: -10, // Position it at the top of the icon
+    bottom: -5, // Position it at the top of the icon
     width: '33%', // Full width of the icon wrapper
     height: 2, // Height of the bar
     backgroundColor: '#004831', // Color of the top bar

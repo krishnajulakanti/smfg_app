@@ -9,6 +9,7 @@ import BottomNavigation from './BottomNavigation';
 // import FeatureNavigation from '../components/features/common/FeatureNavigation';
 import MyProfile from '../components/features/loans/MyProfile';
 import PaymentOptions from '../components/features/loans/PayEmi/PaymentOptions';
+import PaymentSuccess from '../components/features/loans/PayEmi/PaymentSuccess';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ const AppNavigator = () => {
       {/* <Stack.Screen name="FeatureNavigation" component={FeatureNavigation} /> */}
       <Stack.Screen name="MyProfile" component={MyProfile}/>
       <Stack.Screen name="PaymentOptions" component={PaymentOptions} />
+      <Stack.Screen name="PaymentSuccess" component={PaymentSuccess} />
     </Stack.Navigator>
   );
 };

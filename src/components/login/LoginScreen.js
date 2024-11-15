@@ -7,8 +7,7 @@ import {
   Image,
   StyleSheet,
 } from 'react-native';
-// import Logo from '../../assets/images/SMFG-Logo.svg';
-// import Logo from '../../assets/images/SMFG-Logo.svg';
+import Logo from '../../assets/images/SMFG-Logo.svg';
 
 const LoginScreen = ({ navigation }) => {
   const [lanId, setLanId] = useState('');
@@ -21,7 +20,7 @@ const LoginScreen = ({ navigation }) => {
       <Text style={styles.language}>English ▸</Text>
 
       {/* Logo */}
-      {/* <Logo width={300} height={300} /> */}
+      <Logo width={300} height={300} />
 
       <Text style={styles.title}>Login</Text>
 
